@@ -1,0 +1,130 @@
+/* ----------- local fonts ----------- */
+@font-face {
+  font-family: 'Alike Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Alike Regular'), url('../fonts/Alike-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Georgia Pro Cond';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Pro Cond'), url('../fonts/GeorgiaPro-CondRegular.woff') format('woff');
+}
+
+.app-wrapper {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #050608 0%,
+    #0d0f17 50%,
+    #080911 100%
+  );
+}
+
+/* Sparkling effect layer */
+.app-wrapper::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(1px 1px at 10% 10%, rgba(255, 255, 255, 0.1) 50%, transparent 100%),
+    radial-gradient(1px 1px at 20% 50%, rgba(255, 255, 255, 0.05) 50%, transparent 100%),
+    radial-gradient(2px 2px at 30% 30%, rgba(255, 255, 255, 0.08) 50%, transparent 100%),
+    radial-gradient(2px 2px at 40% 70%, rgba(255, 255, 255, 0.03) 50%, transparent 100%),
+    radial-gradient(1px 1px at 60% 40%, rgba(255, 255, 255, 0.07) 50%, transparent 100%),
+    radial-gradient(1px 1px at 70% 90%, rgba(255, 255, 255, 0.04) 50%, transparent 100%),
+    radial-gradient(2px 2px at 80% 20%, rgba(255, 255, 255, 0.06) 50%, transparent 100%),
+    radial-gradient(1px 1px at 90% 60%, rgba(255, 255, 255, 0.02) 50%, transparent 100%);
+  animation: sparkle 8s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+/* Subtle color gradient overlay */
+.app-wrapper::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(40, 54, 211, 0.03) 0%, transparent 25%),
+    radial-gradient(circle at 80% 50%, rgba(40, 54, 211, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(40, 54, 211, 0.03) 0%, transparent 35%);
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .main-content {
+    padding: 0 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}

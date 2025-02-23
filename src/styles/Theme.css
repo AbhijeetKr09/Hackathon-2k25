@@ -1,0 +1,237 @@
+.theme-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.theme-section h2 {
+  color: rgb(255, 255, 255);
+  font-size: clamp(28px, 5vw, 42px);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.theme-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Dropdown Styles */
+.goal-selector {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  z-index: 100;
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(145deg, rgba(40, 54, 211, 0.1), rgba(0, 0, 0, 0.8));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-header:hover {
+  background: linear-gradient(145deg, rgba(40, 54, 211, 0.2), rgba(0, 0, 0, 0.9));
+  transform: translateY(-2px);
+}
+
+.dropdown-header.active {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.selected-preview {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+}
+
+.preview-image {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.dropdown-icon {
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.dropdown-icon.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background: rgba(40, 54, 211, 0.2);
+}
+
+.dropdown-item.active {
+  background: rgba(40, 54, 211, 0.3);
+}
+
+.dropdown-image {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Selected Goal Styles */
+.selected-goal-container {
+  margin-top: 2rem;
+}
+
+.selected-goal-content {
+  display: flex;
+  gap: 3rem;
+  background: linear-gradient(295deg, rgba(0, 0, 0, 0.8), rgba(40, 54, 211, 0.1));
+  padding: 2.5rem;
+  border-radius: 20px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.goal-image-container {
+  flex: 1;
+  max-width: 400px;
+}
+
+.selected-goal-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.goal-details {
+  flex: 1.2;
+  text-align: left;
+  color: white;
+}
+
+.goal-details h3 {
+  font-size: clamp(24px, 4vw, 36px);
+  margin-bottom: 1.5rem;
+  color: #b6bcff;
+}
+
+.goal-details p {
+  font-size: clamp(16px, 2vw, 18px);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Custom Scrollbar */
+.dropdown-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+  background: #2836d3;
+  border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .selected-goal-content {
+    gap: 2rem;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .theme-section {
+    padding: 3rem 1rem;
+  }
+
+  .selected-goal-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .goal-image-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .goal-details {
+    text-align: center;
+  }
+
+  .selected-preview span {
+    font-size: 14px;
+  }
+
+  .dropdown-item span {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .theme-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .dropdown-header {
+    padding: 0.8rem 1rem;
+  }
+
+  .dropdown-item {
+    padding: 0.8rem 1rem;
+  }
+
+  .preview-image {
+    width: 30px;
+    height: 30px;
+  }
+}
