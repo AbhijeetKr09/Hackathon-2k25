@@ -21,7 +21,7 @@ const Navbar = () => {
       </div>
       <div className={`nav-links ${isNavOpen ? "active" : ""}`}>
         <a href="#theme" onClick={handleNavLinkClick}>Themes</a>
-        <a href="#about-us" onClick={handleNavLinkClick}>About</a>
+        <a href="#about-section" onClick={handleNavLinkClick}>About</a>
         <a href="#footer" onClick={handleNavLinkClick}>Contact Us</a>
         <a 
           href="https://docs.google.com/forms/u/3/d/1u-BKbWGZjpMlvq_fzaJo2tMfiMfY8mbNsfkrUd6cH-U/preview?edit_requested=true" 

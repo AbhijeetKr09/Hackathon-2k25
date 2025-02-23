@@ -9,6 +9,15 @@ const Hero = () => {
     seconds: "00",
   });
 
+  const announcements = [
+    "🎉 Registration Extended till February 24, 2025!",
+    "📅 Hackathon Dates: February 28 - March 1, 2025",
+    "💡 Theme Reveal: Tech for Good - Empowering Communities",
+    "🏆 Prize Pool Worth ₹1,00,000+"
+  ];
+
+  const [currentAnnouncement, setCurrentAnnouncement] = useState(0);
+
   useEffect(() => {
     const targetDate = new Date("2025-02-28T00:00:00").getTime();
 
@@ -44,12 +53,25 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    const announcementInterval = setInterval(() => {
+      setCurrentAnnouncement((prev) => (prev + 1) % announcements.length);
+    }, 3000);
+
+    return () => clearInterval(announcementInterval);
+  }, []);
+
   return (
     <div className="hero-section">
       <div className="hero-image"></div>
       <div className="hero-content">
         <h1>Hackathon 2K25</h1>
         <p className="date">February 28, 2025 — March 1, 2025</p>
+        <div className="announcement-carousel">
+          <div className="announcement-text" key={currentAnnouncement}>
+            {announcements[currentAnnouncement]}
+          </div>
+        </div>
         <p className="custom-text">Code - Compete - Conquer</p>
         <p className="description">
           Tech for Good: Empowering communities for a Better Tomorrow

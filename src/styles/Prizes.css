@@ -16,15 +16,16 @@
 
 .prizes-qr-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 40px;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 20px;
+  align-items: flex-start;
 }
 
 .prizes-section {
-  width: 100%;
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -87,22 +88,16 @@
 }
 
 .qr-section {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex: 1 1;
+  /* position: sticky; */
+  top: 20px;
+  max-width: none;
+  margin: 0;
+  height: fit-content;
+  justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.qr-section:hover {
-  background: rgba(255, 255, 255, 0.15);
 }
 
 .qr-heading {
@@ -145,10 +140,16 @@
 @media (max-width: 1024px) {
   .prizes-qr-container {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .prizes-section, .qr-section {
+    width: 100%;
   }
 
   .qr-section {
-    width: 100%;
+    position: static;
+    max-width: 400px;
   }
 }
 

@@ -130,7 +130,6 @@ const FaqBot = () => {
                       >
                         {action.icon}
                         <span className="action-name">{action.name}</span>
-                        <span className="action-value">{action.value}</span>
                       </a>
                     ))}
                   </div>
