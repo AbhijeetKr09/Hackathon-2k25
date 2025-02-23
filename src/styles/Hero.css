@@ -7,6 +7,7 @@
   text-align: center;
   height: 80vh;
   width: 100%;
+  margin-bottom: 3rem;
 }
 
 .hero-content {
@@ -170,6 +171,7 @@
     padding: 20px;
     height: auto;
     min-height: 80vh;
+    margin-bottom: 2rem;
   }
 
   .hero-content h1 {
