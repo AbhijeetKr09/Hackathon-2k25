@@ -10,6 +10,16 @@
   margin-bottom: 3rem;
 }
 
+.hero-section a {
+    text-decoration: none;
+}
+
+.hero-section a,
+.hero-section a:hover,
+.hero-section a:focus {
+    text-decoration: none;
+}
+
 .hero-content {
   text-align: center;
   max-width: 800px;
@@ -167,6 +177,15 @@
 }
 
 @media (max-width: 768px) {
+  .hero-section a {
+    text-decoration: none;
+}
+
+.hero-section a,
+.hero-section a:hover,
+.hero-section a:focus {
+    text-decoration: none;
+}
   .hero-section {
     padding: 20px;
     height: auto;
