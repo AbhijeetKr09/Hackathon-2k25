@@ -101,7 +101,6 @@ const Hero = () => {
           href="https://docs.google.com/forms/u/3/d/1u-BKbWGZjpMlvq_fzaJo2tMfiMfY8mbNsfkrUd6cH-U/preview?edit_requested=true" 
           target="_blank" 
           rel="noopener noreferrer"
-          onClick={handleNavLinkClick}
         >
           <button className="register-btn">REGISTER NOW</button>
         </a>
