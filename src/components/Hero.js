@@ -102,9 +102,9 @@ const Hero = () => {
           target="_blank" 
           rel="noopener noreferrer"
         >
-          <button className="register-btn">REGISTER NOW</button>
+          <button className="hero-register-btn">REGISTER NOW</button>
         </a>
-        <button className="hero-register-btn">REGISTER NOW</button>
+        
       </div>
     </div>
   );
