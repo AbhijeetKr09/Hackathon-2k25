@@ -97,7 +97,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <button className="hero-register-btn">REGISTER NOW</button>
+        <button className="hero-register-btn" href="https://docs.google.com/forms/u/3/d/1u-BKbWGZjpMlvq_fzaJo2tMfiMfY8mbNsfkrUd6cH-U/preview?edit_requested=true">REGISTER NOW</button>
       </div>
     </div>
   );
